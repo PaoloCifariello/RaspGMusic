@@ -1,0 +1,22 @@
+<html>
+	<head>
+	</head>
+		<body>
+
+		<%
+		    rows = [v for v in range(0,10)]
+		%>
+
+		<ul>
+		    % for v in range(0,100):
+		        ${show_track(tracks.next())}
+		    % endfor
+		</ul>
+		
+		<%def name="show_track(track)" filter="n">
+		    <li>
+		    	<a href=${'play/' + track['gid']}>${track['name']}</a>
+		    </li>
+		</%def>
+	</body>
+</html>
